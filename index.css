@@ -58,12 +58,17 @@ body{
     color: aqua;
     transition: ease-in 0.5s;
 }
+.todo-menu, .info-content-sub, .contacto-social {
+    display: none;
+}
+
+
 
 .main{
     margin: 0 auto;
     width: 80vw;
     height: 100%;
-    min-height: 100vh; /* O el valor que mejor se ajuste */
+    min-height: 100vh; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +80,7 @@ body{
     
 }
 h1{
-    font-size: 3em;
+    font-size: clamp(4vw,1.5em,3em);
 }
 span{
     color: aqua;
@@ -84,10 +89,10 @@ span{
 .info-content{
     
     width: 70%;
-    height: auto; /* Antes tenía altura fija, ahora se ajusta automáticamente */
-    display: flex; /* Hice que el contenido sea un contenedor flex */
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    height: auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
    
 }
 
@@ -122,8 +127,17 @@ span{
     padding: 2em;
 }
 
+.iconos{
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que los iconos se ajusten automáticamente */
+    justify-content: center; /* Opcional, para centrar los iconos */
+    gap: 10px; /* Espacio entre los iconos */
+    margin-top: 2em; /* Ajusta según sea necesario */
+}
+
 .sobre-info .iconos i{
     font-size: 50px;
+    transition: transform 0.3s ease;
 }
 
 .img-sobre-mi{
@@ -186,9 +200,9 @@ span{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-
     width: 100%;                   
-    padding: 20px; 
+    padding: 20px;
+   
 }
 
 
@@ -228,6 +242,11 @@ span{
     justify-content: space-evenly;
     font-size: 1.5em;
     
+}
+
+.link, i:hover{
+    color:aqua ;
+    transition: ease-in 0.5s;
 }
 
 .card-img01{
@@ -297,6 +316,148 @@ footer{
 
 .coontatos, i{
     color: black;
+}
+
+@media screen and (max-width: 900px){
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .sobre-info {
+        flex-grow: 1;  /* Hace que este div ocupe todo el espacio disponible */
+        width: 100%;
+    }
+    .img-sobre-mi {
+        margin-top: 20px;  /* Mueve la imagen hacia abajo */
+        width: 100%;
+    }
+.info-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.info-content .contacto-social, i{
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+    font-size: 1.5em;
+    
+}
+.descargar-cv, .a-s,.d-s{
+    display: none;
+}
+.info-content-sub{
+    margin-bottom: .5em;
+}
+
+.img-me{
+    margin-top: 10em;
+    margin-bottom: 5em;
+
+}
+    .menu{
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: #2b3058;  
+        z-index: 1;
+        transform: translate(-110%);
+        transition: all .5s ease-in-out ;  
+    }
+    .show-menu{
+        transform: translate(0%);
+
+        transition: all .5s ease-in-out ;
+    }
+    .menu li{
+        margin: 2em;
+
+    }
+    .todo-menu{
+        display: block;
+    }
+    .todo-menu i{
+        cursor: pointer;
+
+    }
+    .todo-menu i:hover{
+        color: aqua;
+        transition: ease-in 0.5s;
+
+    }
+
+    .fa-bars{
+        font-size: 1.5em;
+        margin-top: -.2em;
+    }
+    
+     .fa-close{
+        font-size: 1.7em;
+        display: none;
+    }
+
+    main .img-me{
+        width: min(70%, 350px);
+        height: auto;
+    }
+  
+    .contacto-social,.info-content-sub {
+        display: block;
+        
+    }
+
+    .sobre-mi{
+        display: flex;
+        flex-direction: column-reverse;
+        
+
+    }
+
+    .img-sobre-mi{
+        display: none;
+    }
+    .iconos i {
+        font-size: 40px;
+        color: black; 
+        
+    }
+    .contactos i{
+        font-size: 3em;
+        color: black;
+       }
+    
+}
+@media (max-width: 480px) {
+    .iconos i {
+        font-size: 30px; 
+        color: black;
+
+    }
+   footer h2, h5 {
+    display: none;
+   }
+
+  
+   .card-img01, .card-img02, .card-img03, .card-img04, .card-img05, .card-img06 {
+    background-size: contain; 
+    background-position: center; 
+    height: 150px; 
+    background-repeat: no-repeat;
+}
+.card {
+    width: 100%; 
+    height: auto; 
+}
+
 }
 
 
