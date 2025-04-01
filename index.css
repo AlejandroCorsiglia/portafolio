@@ -45,6 +45,7 @@ body{
     color: #fff;
     text-decoration: none;
     font-size: 25px;
+    
    
 }
 
@@ -456,7 +457,7 @@ footer{
    }
 
   
-   .card-img01, .card-img02, .card-img03, .card-img04, .card-img05, .card-img06 {
+   .card-img00, .card-img01, .card-img02, .card-img03, .card-img04, .card-img05, .card-img06 {
     background-size: contain; 
     background-position: center; 
     height: 150px; 
