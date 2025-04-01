@@ -251,6 +251,13 @@ span{
     transition: ease-in 0.5s;
 }
 
+.card-img00{
+    width: 100%;
+    height: 200px;
+    background-image: url(img/appClima.png);
+    background-size: cover;
+}
+
 .card-img01{
     width: 100%;
     height: 200px;
